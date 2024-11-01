@@ -1,0 +1,1033 @@
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?42194944');
+  src: url('../font/fontello.eot?42194944#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff2?42194944') format('woff2'),
+       url('../font/fontello.woff?42194944') format('woff'),
+       url('../font/fontello.ttf?42194944') format('truetype'),
+       url('../font/fontello.svg?42194944#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*---------------- media gallery-----*/
+
+ button.mfp-close, button.mfp-arrow{
+  background:transparent !important;
+  color: #905726;
+  outline: none !important;
+}
+ button.mfp-close:before{
+  background:none !important;
+ }
+.mfp-arrow:active{
+  outline: none !important;
+  border:none;
+}
+ .mfp-close-btn-in .mfp-close{
+  color: #fff !important;
+ }
+ .mfp-arrow-right:after{
+  border-left: 17px solid #fff;
+ }
+ .mfp-arrow-left:after{
+    border-right: 17px solid #fff;
+ }
+ .mfp-arrow-right:before{
+  border-left:0 !important;
+ }
+.mfp-arrow-left:before{
+  border-right: 0 !important;
+}
+
+/* WP Documentation single*/
+.wp-doc-theme{line-height: 1.6;}
+.single-wp_documentation .content-area{
+  width: 100%;
+}
+.wp-doc-theme ul,.wp-doc-theme ol{list-style: none;}/*
+.wp-doc-theme a{box-shadow: none; text-decoration: none;color: #000;}
+*/.wp-doc-theme a:hover,.wp-doc-theme a.active,.wp-doc-theme a:focus{text-decoration: none; outline: none; }
+
+.clearfix:after{
+  clear: both;
+  content: " ";
+  display: block;
+}
+.wp-doc-theme p{
+  margin-bottom: 20px;
+}
+
+
+#document-toc iframe {
+    margin-bottom: 0 !important;
+    max-width: 100%;
+    vertical-align: middle;
+    background: #ECF0F5;
+    height: 60px;
+    padding: 6px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+}
+.wp-doc-head-wrap {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+    padding: 0 0 5px;
+    display: table;
+    width: 100%;
+}
+#document-toc h2{
+    padding:  7px;
+    display: block; 
+    /*width:100%;*/
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+/*.ws-wp-docs .mCSB_inside > .mCSB_container {margin-right: 5px!important}
+.wp-doc-no-scroll .mCSB_inside > .mCSB_container{margin-right: inherit!important}
+
+.mCSB_scrollTools{width: 5px!important;}
+.wp-doc-no-scroll .mCSB_scrollTools{width: inherit!important;}*/
+
+.ws-wp-tool-wrapper{float: right; margin-top: 5px; z-index: 9999;}
+.ws-content-icon-wrapper,.ws-votes{
+/*  display: none;*/
+  visibility: hidden;
+
+}
+.ws-visible h2 {
+    /* margin-top: 3%; */
+    text-align: center;
+    display: inline-block;
+    line-height: 60px;
+    height: 60px;
+}
+
+.wp-doc-section:hover .ws-content-icon-wrapper, .wp-doc-section:hover .ws-votes{
+    visibility: visible;
+  }
+.wp-doc-section{
+  padding-bottom: 1px;
+}
+button:active{
+  outline: none;
+}
+.wp-doc-theme .doc-list-title {
+  display: inline-block;
+  float: left;
+}
+/* -------------------------------- 
+
+Main components 
+
+-------------------------------- */
+
+/* Theme Defaults  */
+.wp-doc-theme {
+  width: 100%;
+}
+.ws-content-icon-wrapper {
+    float: right;
+   /* margin-right: 10px;*/
+}
+.ws-wp-docs-content a.wp-doc-icon.wp-doc-email-icon {    
+    font-size: 17px;
+    margin-left: 0px;
+
+}
+a.edit-doc-page {
+    font-size: 14px;
+    margin-left: 10px;  
+}
+/*Header Section*/
+header.doc-top-head{
+  padding: 30px 0;
+  text-align: center;
+}
+#doc_search .ws-search-box {
+    border: 1px solid rgb(236, 240, 245);
+    padding: 6px 13px;
+}
+
+div.doc-search-form{float: left; position: relative; text-align: left; width: 26%;}
+div.doc-search-form form{width: auto;}
+input.ws-search-box[type="text"]{background: #fff none repeat scroll 0 0; border: 1px solid #fff;border-radius: 3px; box-sizing: border-box; color: #4e4e4e;  font: normal 12px/1.6 "Open Sans",sans-serif; padding: 8px 15px; width: 100%;}
+button.ws-search-button{background: #eee; border: 1px solid #fff; border-radius: 3px; border-top-left-radius: 0; border-bottom-left-radius: 0; box-shadow: none; height: 100%; margin: 0; padding: 0 10px; position: absolute; right: 0; top: 0px; }
+button.ws-search-button:hover{background: #37a9f4; cursor: pointer;}
+
+.doc-title {
+    width: auto;
+    text-align: left;
+    display: inline-block;
+    float: left;
+}
+.doc-click{float: right; text-align: right; width: auto; margin-top: 10px;}
+
+.ws-button {
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    color: #333;
+    cursor: pointer;
+    font:normal 13px/1.6 "Open Sans",sans-serif;
+    margin: 5px 0 10px 10px;
+    outline: medium none;
+    padding: 2px 5px;
+    text-transform: capitalize;
+}
+
+/*toc top*/
+.ws-visible .top-menu{left: 0; position: absolute; top: 30; width: 100%!important;}
+ .ws-visible{
+      visibility: hidden;
+      background-color:#ECF0F5;
+      height: 40px;
+      display: none;
+    } 
+
+/*Content Section  */
+section.ws-wp-docs{position: relative; background: #ffffff;}
+
+/* table of content */
+section.toc-pos-left .ws-wp-doc-items{float: left;}
+section.toc-pos-right .ws-wp-doc-items{float: right;}
+section.toc-pos-top .ws-wp-doc-items, section.toc-pos-none .ws-wp-doc-items{display: none;}
+
+.ws-wp-doc-items{ box-sizing:border-box; padding: 10px; }
+
+.ws-wp-docs .mCSB_inside>.mCSB_container {
+    margin-right: 10px;
+}
+
+span.doc-list-item-wrapper {
+    display: inherit;
+    position: relative;
+    padding: 10px 15px 10px 10px;
+}
+ul.ws-wp-docs-categories{margin: 0!important; padding: 0; }
+ul.ws-wp-docs-categories ul{margin: 0!important;display: none;padding: 0px}
+
+.ws-wp-docs-categories li{background: #fff; position: relative;}
+.ws-wp-docs-categories a{
+ /* background: #fff;*/
+  box-sizing:border-box;
+  color: #1a1a1a;
+  display: block;
+  font-weight: bold;  
+/*  padding: 10px 15px 10px 10px;*/
+  width: 100%;
+}
+.ws-wp-docs-categories ul > li a {
+    padding-left: 9px;
+}
+.ws-wp-docs-categories ul ul > li a {
+    padding-left: 15px;
+}
+.ws-wp-docs-categories ul ul > li li a{ padding-left: 20px;}
+.ws-wp-docs-categories ul ul > li li li a{ padding-left: 25px;}
+.ws-wp-docs-categories li>a.active, .ws-wp-docs-categories li>a:hover{ }
+.ws-wp-docs-categories li span.dashicons{float: right;
+    line-height: 1.6;
+    margin-right: 4px;
+    width: 7%;
+    padding-left: 2px;}
+
+.ws-wp-docs-categories li span.toc-has-child{ position: absolute; top: 8px; right: 7px;}
+.ws-wp-docs-categories li span.toc-has-no-child{color: #ccc;}
+.ws-wp-docs-categories li span.toc-has-child:hover{cursor: pointer;}
+
+/*Main content*/
+.ws-wp-docs-content{ box-sizing:border-box; padding: 10px 10px 10px 20px; /*width: 74%;*/  }
+.ws-wp-docs-content h2.doc-list-title{
+ /* border-bottom: 1px solid #ccc;*/
+   /* margin-bottom: 15px;*/
+  /*  padding: 0 0 5px;*/
+    line-height: inherit;
+    display: inline-block;
+  /*  height: 38px;*/
+    margin:0;
+    float: left;
+}
+span.num-counter{float: left;margin-right: 10px;}
+.ws-wp-docs-content img{max-width: 100%;}
+section.toc-pos-left .ws-wp-docs-content{float: right;}
+section.toc-pos-right .ws-wp-docs-content{float: left;}
+section.toc-pos-top .ws-wp-docs-content, section.toc-pos-none .ws-wp-docs-content{width: 100%}
+
+/*scroll to top*/
+.cd-top {
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+  position: fixed;
+  bottom: 60px;
+  right: 25px;
+  border-radius: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: rgba(0, 0, 0, 0.8) url(../images/ico/top1.png) no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+}
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+  background-color: #777;
+}
+.cd-top.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .7;
+}
+.no-touch,.cd-top:hover {
+  background-color:#2b2b2b;
+  opacity: 1;
+  border-radius: 100%;
+   -webkit-transition-duration: 1.0s; /* Safari */
+    transition-duration: 1.0s;
+transition: all 0.9s ease 0s;
+  -moz-transition: all 0.9s ease 0s;
+  -webkit-transition: all 0.9s ease 0s;
+  -o-transition: all 0.9s ease 0s;
+
+}
+/*----ws-suggestion */
+a.ws-form-show {
+    font-size: 12px;
+    padding: 12px;
+    text-align: center;
+    float: right;    
+    border-top-left-radius: 10px;
+    outline: none;
+}
+a.ws-form-show:hover,a.ws-form-show:active,a.ws-form-show:focus{
+  
+  border:none;
+  outline: none;
+}
+a.ws-form-close {
+    cursor: pointer;
+    float: right;
+    margin-right: 2%;
+    color: #E91B23;
+}
+.ws-form-close span.dashicons.dashicons-no-alt {
+    margin-top: 4px;
+}
+.ws-feedback {
+    clear: both;
+    background-color: #f1f1f1;
+    width: 100%;
+    float: left;
+    margin: 0 0 20px 0;
+    padding-bottom: 10px;
+}
+.ws-feedback-head {
+    text-align: center;
+    border-bottom: 1px dotted #ccc;
+    padding: 15px 0;
+}
+.ws-feedback-head p {
+    margin: 0;
+    font-size: 18px;
+    display: inline-block;
+}
+.ws-feedback input.span3 {
+    padding: 12px;
+    font-size: 10px;
+    color: #777;
+    background-color: #fff;
+    margin: 0 0 10px;
+    width: 100%;
+}
+.ws-feedback label {
+    font-size: 14px;
+}
+.ws-feed-label {
+    margin: 15px;
+
+}
+.left-feed-area {
+    float: left;
+    width: 35%;
+    margin-left: 10%;
+}
+.right-feed-area {
+    float: left;
+    width: 40%;
+    margin-left: 5%;
+    margin-right: 10%;
+}
+.ws-feedback textarea#message {
+    background: #fff;
+    margin-top: 4px;
+}
+button.btn.ws-btn-primary {
+    float: right;
+    margin: 15px 0 15px;
+    font-size: 13px;
+    border-radius: 2px;
+    color: #fff;
+    padding: 8px 21px;
+    font-weight: normal;
+}
+button.btn.ws-btn-primary:hover,button.btn.ws-btn-primary:hover:focus,button.btn.ws-btn-primary:hover:active{
+  color: #fff;
+}
+/*--ws-like-dislike----*/
+.ws-choice-container{
+  float:left;
+  width: 100%;
+  margin:  0 0 20px;
+  background: #ECF0F5;
+  clear: both;
+}
+.ws-votes {
+    float: right;
+    margin-left: 15px;
+    margin-top: -4px;
+}
+.ws-votes a:hover{
+  cursor: default;
+}
+.ws-votes .dashicons-yes:before,.ws-votes .dashicons-no:before{
+  font-size: 18px;
+}
+a.ws-btn-like-dislike:hover{
+ cursor: pointer;
+ opacity: 0.7;
+}
+
+.ws-dislikes,.ws-likes{
+  display: inline-block;
+  border-radius: 3px;  
+  opacity: 1;
+}
+.ws-likes {
+    background: #777 none repeat scroll 0 0;
+    color: #fff !important;
+    padding: 0px;
+    margin: 0;
+    font-size: 11px;
+}
+.ws-dislikes {
+    background: #ff9999 none repeat scroll 0 0;
+   color: #fff !important;
+    padding: 0px;
+    font-size: 11px;
+    margin: 0px 0 0 12px;
+}
+a.ws-likes.clicked-like{ background-color: #3CB371; }
+a.ws-dislikes.clicked-dislike{background-color:  #E91B23 ;}
+.suggestion-message{float: left; font-size: 12px;}
+.suggestion-message.suggestion-error{color: #E14D43}
+.suggestion-message.suggestion-success{color: #008542}
+
+.count {
+    margin-right: 7px;
+    vertical-align: middle;
+}
+.doc-choice-click {
+    width: 35%;
+    float: left;
+    text-align: right;
+    padding-right: 10px;
+}
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+  /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+p.ws-content {
+    margin: 0;
+}
+.date.sub-text {
+    color: #777;
+    font-size: 10px;
+}
+span.dashicons.dashicons-calendar-alt {
+    font-size: 12px;
+    text-align: left;
+}
+.doc-click a {
+    box-shadow: none;
+    text-decoration: none;
+    margin-right: 10px;
+    height: 22px;
+    width: 22px;
+    border-radius: 3px;    
+}
+
+a.copy-title-link{line-height: 1.55; font-size: 17px; margin-left: 10px;}
+a.copy-title-link:hover,.ws-wp-docs-content a.wp-doc-icon.wp-doc-email-icon:hover,a.edit-doc-page:hover{cursor: pointer;}
+
+.ws-collapse-navbar .ws-navbar-toggle {
+    border-color: rgb(221, 221, 221);
+}
+.ws-collapse-navbar {
+    border-bottom: 1px dotted  #000;
+    height: 55px;
+}
+.ws-navbar-toggle {
+    background-color:#000;
+    background-image: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    float: left;
+    margin: 12px;
+    padding: 7px;
+    position: relative;
+    outline: none;
+}
+.ws-navbar-toggle:hover,.ws-navbar-toggle:active,.ws-navbar-toggle:focus{
+  outline: none;
+  background-color: inherit;
+}
+.ws-sr-only {
+    border: 0 none;
+    clip: rect(0px, 0px, 0px, 0px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.ws-collapse-navbar .ws-navbar-toggle .ws-icon-bar {
+    background-color: #fff;
+}
+.ws-navbar-toggle .ws-icon-bar {
+    border-radius: 1px;
+    display: block;
+    height: 2px;
+    width: 22px;
+}
+.ws-navbar-toggle .ws-icon-bar + .ws-icon-bar {
+    margin-top: 4px;
+}
+.fix-ws-collapse-navbar{
+  background-color: red;
+  position: fixed;
+  height: 100px;
+}
+
+
+
+/*Archive Page*/
+
+
+.wp-doc-archive article {
+    border: 1px solid #bbb;
+    box-sizing: border-box;
+    float: left;
+    padding: 3px;
+    width: 15%;
+    border-bottom: 3px double #bbb;
+    margin: 10px 5px 7px 8px;
+}
+.ws-article-wrapper {
+    float: left;
+    width: 100%;
+}
+.doc-post-thumbnail img {
+    width: 100%;
+    height: auto;
+}
+
+span.ws-wp-documentation-category {
+    background-color: #333;
+    color: #fff;
+    font-weight: normal;
+    letter-spacing: 0.04em;
+    padding: 0.5em 1em;
+    position: absolute;
+    top: 0;
+    text-transform: uppercase;
+    opacity: 0.6;
+    font-size: 13px;
+    left: 0;
+}
+.wp-documentation-post-content p{
+  margin-top: 5px;
+}
+span.ws-doc-entry{font-weight: bold;}
+.wp-doc-archive article .entry-title{text-align: center; text-transform: capitalize;}
+h2.entry-title.ws-archives-list-title {
+    font-size: 12px;
+    margin: 3px;
+    padding: 0;
+    border-top: 1px solid #bbb;
+}
+header.entry-header.ws-archive-head {
+    margin: 0;
+    padding: 0;
+}
+/*archive page article per row*/
+.col-per-row-9 article.wp-documentation-post{box-sizing: border-box; margin:0;margin-right:0.46%!important; width:10.7%}
+.col-per-row-8 article.wp-documentation-post{box-sizing: border-box;margin:0;margin-right:0.57%!important; width:12%}
+.col-per-row-7 article.wp-documentation-post{box-sizing: border-box;margin:0;margin-right:0.91%!important; width:13.5%}
+.col-per-row-6 article.wp-documentation-post{box-sizing: border-box;margin:0;margin-right:1.28%!important; width:15.6%}
+.col-per-row-5 article.wp-documentation-post{box-sizing: border-box;margin:0;margin-right:1.25%!important; width:19%}
+.col-per-row-4 article.wp-documentation-post{box-sizing: border-box;margin:0;margin-right:1.33%!important; width:24%}
+.col-per-row-3 article.wp-documentation-post{box-sizing: border-box;margin:0;margin-right:2%!important; width:32%}
+.col-per-row-2 article.wp-documentation-post{box-sizing: border-box;margin:0;margin-right:2%!important; width:49%}
+.col-per-row-1 article.wp-documentation-post{box-sizing: border-box;margin:0;margin-right:0!important; width:100%}
+
+/*ws-wp-navigation  */
+.ws-wp-navigation {
+    margin-top: 30px;
+    padding: 20px;
+}
+.ws-wp-navigation ul{
+  text-align: center;
+  list-style: none;
+}
+
+.ws-wp-navigation li a,
+.ws-wp-navigation li a:hover,
+.ws-wp-navigation li.active a,
+.ws-wp-navigation li.disabled {color: #fff;text-decoration:none;}
+.ws-wp-navigation li { display: inline;}
+.ws-wp-navigation li a,
+.ws-wp-navigation li a:hover,
+.ws-wp-navigation li.active a,
+.ws-wp-navigation li.disabled { background-color: #777; border-radius: 3px; cursor: pointer;padding:5px 10px; }
+.ws-wp-navigation li a:hover,
+.ws-wp-navigation li.active a { background-color: #2b2b2b;}
+/*ws-wp-navigatino ends*/
+.wp-doc-archive-view-list .doc-post-thumbnail, .wp-doc-archive-view-list .wp-documentation-post-content{float: left; margin-bottom: 2%;}
+.wp-doc-archive-view-list .doc-post-thumbnail{margin:2% 2% 2% 0; width: 20%;}
+.doc-post-thumbnail{position: relative;}
+.wp-doc-archive-view-list .wp-documentation-post-content{width: 78%; margin-top:2%;}
+.wp-documentaton-tools{border: 1px solid #eee; /*width: 100%;*/ margin-bottom: 20px; padding: 5px  10px; background-color: #F7F7F7;}
+.wp-documentaton-tools .tool-left{    float: left;
+   /* display: flex;
+    align-items: center;*/}
+.wp-documentaton-tools .tool-left a {
+color: #6E6D6D;}
+.wp-documentaton-tools .tool-right{float: right; }
+
+span.tool-view,span.tool-categories{color: #23282D; font: normal 14px/1.55 "Open Sans",sans-serif ; margin-right: 10px;font-weight: bold;}
+span.tool-icon{vertical-align: middle; margin-right: 5px;}
+span.tool-icon:hover,span.tool-icon.active{color:#23282D ; cursor: pointer;}
+
+#wp-document-taxonomy-list {font: normal 13px/1.55 "Open Sans",sans-serif; padding: 3px 10px; width: 150px; background-color: #F7F7F7; border: 1px solid #ccc; float: right;}
+
+.wp-document-archive-list-wrapper{margin-bottom: 20px;}
+.wp-document-archive-list-wrapper article.wp-documentation-post{border: 1px solid #ccc; float: left; padding: 0px;}
+.wp-document-archive-list-wrapper article.wp-documentation-post.last{margin-right: 0!important}
+.wp-doc-archive-view-standard.wp-doc-archive-view-list h2.entry-title.ws-doc-entry {
+    text-align: left;
+}
+.wp-doc-archive-view-grid .wp-documentation-post-content .ws-doc-entry {
+    text-align: center;
+    display: block;
+    margin: 3px 0;
+}
+  h2.entry-title.ws-doc-entry {
+    font-size: 20px;
+    font-weight: normal;
+    padding: 0;
+    margin: 2% 0;
+}
+.wp-documentation-post {
+   padding: 0 5px;
+}
+
+select#documentation_list {
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    background: #eff0f1;
+    font-size: 15px;
+    color: #23282D;
+    margin-left: 25%;
+}
+.wp-doc-archive-view-standard.wp-doc-archive-view-grid 
+article {
+    background: #F7F7F7;
+}
+.wp-doc-archive-view-standard.wp-doc-archive-view-list 
+article:nth-child(odd) {
+    background: #F7F7F7;
+    padding-top: 1px;
+}
+.wp-doc-archive-view-standard.wp-doc-archive-view-list 
+article:nth-child(even) {
+    background: #fff;
+    padding-top: 1px;
+}
+/*---------------gallery------------*/
+.wp-doc-theme .gallery {
+    margin: 10px;
+}
+.wp-doc-theme .gallery-item {
+    display: inline-block;
+    max-width: 33.33%;
+    padding: 0;
+    text-align: center;
+    vertical-align: top;
+     width: auto; 
+         margin: 1%;
+}
+
+/* -------------------------------- 
+
+Media components 
+
+-------------------------------- */
+
+
+@media (min-width: 1200px) and (max-width: 1920px) {
+
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+@media (max-width: 991px) {
+  .ws-visible{
+      visibility: visible;
+      background-color:#ECF0F5;
+      height: 60px;
+      display: block;
+    } 
+    .ws-collapse-navbar {
+    height: 60px;
+}
+    .ws-navbar-toggle {
+    margin: 12px;
+    padding: 10px;
+}
+.ws-visible h2 {
+    margin: 0;
+    display: inline-block;
+}
+      .ws-visible{display: block!important;}
+      .ws-wp-doc-items {
+      visibility: hidden;
+      position: absolute;
+  }
+  .ws-wp-docs-content {
+    width: 100% !important;
+    float: none !important;
+}
+header.doc-top-head{
+  margin: 0 auto;
+}
+}
+@media (max-width: 767px) {
+       
+               
+}
+@media only screen and (max-width : 640px){
+  .ws-content-icon-wrapper,.ws-votes{
+  visibility: visible;
+
+}
+
+.ws-wp-docs-content h3, .ws-wp-docs-content h4, .ws-wp-docs-content h5, .ws-wp-docs-content h6{   
+   /* height: 100%;*/
+}
+  .left-feed-area {
+    width: 100%;
+    margin-left: 0;
+    float: none;
+}
+.right-feed-area {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+ .ws-visible{
+      visibility: visible;
+      background-color:#F1F1F1;
+      height: 60px;
+      display: block;
+    }
+     .ws-visible{display: block!important;}
+      .ws-wp-doc-items {
+      visibility: hidden;
+      position: absolute;
+  }
+  .ws-wp-docs-content {
+    width: 100%;
+    float: none;
+}
+
+ /*.wp-documentaton-tools .tool-right{
+  float: left;
+  margin-top: 20px;
+ 
+}*/
+
+.ws-wp-tool-wrapper{float: right;}
+.wp-doc-archive-view-grid .wp-documentation-post-content .ws-doc-entry{ display: none; }
+/*archive page article per row*/
+.col-per-row-9 article.wp-documentation-post{margin:2% 1% 1% 2%; width:46%}
+.col-per-row-8 article.wp-documentation-post{margin:2% 1% 1% 2%; width:46%}
+.col-per-row-7 article.wp-documentation-post{margin:2% 1% 1% 2%; width:46%}
+.col-per-row-6 article.wp-documentation-post{margin:2% 1% 1% 2%; width:46%}
+.col-per-row-5 article.wp-documentation-post{margin:2% 1% 1% 2%; width:46%}
+.col-per-row-4 article.wp-documentation-post{margin:2% 1% 1% 2%; width:46%}
+.col-per-row-3 article.wp-documentation-post{margin:2% 1% 1% 2%; width:46%}
+.col-per-row-2 article.wp-documentation-post{margin:2% 1% 1% 2%; width:46%}
+.col-per-row-1 article.wp-documentation-post{margin:2% 1% 1% 2%; width:46%}
+}
+
+
+}
+
+
+@media only screen and (max-width : 320px){
+.ws-visible{
+      visibility: visible;
+      background-color:#F1F1F1;
+      height: 55px;
+      display: block;
+    }
+     .ws-visible{display: block!important;}
+      .ws-wp-doc-items {
+      visibility: hidden;
+      position: absolute;
+  }
+  .ws-wp-docs-content {
+    width: 100%;
+    float: none;
+}
+.ws-wp-tool-wrapper{float: left;}
+
+.wp-doc-theme .doc-list-title {
+  display: block;
+  float: none;
+}
+}
+
+@media only screen  and (min-device-width: 320px) and (max-device-width: 480px){
+    .ws-visible{
+      visibility: visible;
+      background-color:#F1F1F1;
+      height: 60px;
+      display: block;
+    }
+    .ws-wp-tool-wrapper{float: left;}
+    .wp-doc-theme .doc-list-title {
+  display: block;
+  float: none;
+}
+
+}
+
+/* Portrait */
+@media only screen  and (min-device-width: 320px)  and (max-device-width: 480px) and (orientation: portrait) {
+
+    .wp-documentaton-tools .tool-right{
+  float: left;
+  margin-top: 20px;
+}
+ }
+
+/*Icons*/
+.doc-click .wp-doc-icon{
+        margin: 0 5px;
+    font-size: 17px;
+}
+
+.wp-doc-icon:before{
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ /* Font smoothing. */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.wp-doc-email-icon:before{
+  content: "\e805";
+}
+.wp-doc-link-icon:before{
+  content: "\e804";
+}
+.wp-doc-print-icon:before{
+  content: "\e803";
+}
+.wp-doc-pencil-icon:before{
+  content: "\e802";
+}
+/* Css for 2015 theme*/
+.wp-doc-theme, .wp-doc-twenty-fourteen .wp-doc-theme{
+  width: auto;
+}
+.wp-doc-twenty-fourteen .wp-documentation-post-content{
+  margin: 2% 0;
+}
+.wp-doc-twentyfifteen header.doc-top-head.entry-header {
+    margin: 0 10px;
+    max-width: 100%;
+    padding: 20px;
+    background: #fff;
+}
+
+.wp-doc-twentyfifteen .ws-logo-title.entry-title {
+    margin: 25px 0;
+}
+.wp-doc-twentyfifteen .doc-title {
+    width: auto;
+    display: inline-block;
+    float: left;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+.wp-doc-twentyfifteen .doc-click{
+   margin: 25px 0;
+}
+/*.wp-documentation-twenty-fifteen .wp-doc-theme h2{
+  font-size: 17px;
+}*/
+.wp-doc-twentyfifteen .wp-doc-theme .wp-documentaton-tools{
+ width: 84%;
+ margin: 2% 0 2% 8%;
+}
+.wp-doc-twenty-fifteen header.doc-top-head{
+  padding: 0;
+    text-align: left;
+}
+.wp-doc-twenty-fifteen .ws-wp-docs-categories a{
+  font-size: 14px;
+}
+.wp-doc-twentyfifteen .wp-doc-archive-view-list article{
+  margin-top: 15px;
+}
+.wp-doc-twenty-fifteen .comments-area{
+  margin: 0;
+  box-shadow: none;
+}
+.wp-doc-twentyfifteen .wp-document-archive-list-wrapper {
+    margin: 1.5% 8%;
+}
+
+.wp-doc-twentyfifteen select#documentation_list{
+  margin: 2% 0 0 27.00%;
+}
+.wp-doc-twentyfifteen section.document-comments {
+    padding: 0 !important;
+}
+.wp-doc-twentyfifteen .wp-documentation-comments{
+ margin: 0 10px;
+}
+.wp-doc-twentyfifteen section.ws-wp-docs {
+    padding: 0 20px;
+    margin: 0 10px;
+}
+.wp-doc-twentyfifteen .ws-wp-docs-categories li span.dashicons{
+  width: 7%;
+}
+.wp-doc-twentyfifteen .t15wd {
+    padding-bottom: 40px;
+}
+
+.wp-documentation-twenty-fourteen .tfwd {
+    margin: 0 20px;
+}
+.wp-documentation-twenty-fourteen .wp-doc-archive-view-list{
+  margin: 0 20px;
+}
+.wp-documentation-twenty-fourteen header.doc-top-head.entry-header {
+    margin: 0 0 3% 0;
+    max-width: 100%;
+    padding: 0;
+}
+.wp-documentation-twenty-fourteen .doc-title {
+    width: 50%;
+    display: inline-block;
+    float: left;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+.wp-documentation-twenty-fourteen .twentyfourteen .doc-top-head{
+      margin: 0;
+    max-width: 650px;
+    padding: 0;
+    float: right;
+}
+.wp-doc-twentyfourteen .ws-wp-docs-content{
+ /* width: 71%;*/
+}
+
+
+.wp-doc-twentyfourteen article.wp-documentation-post {
+    padding: 5px !important
+    box-sizing:border-box;
+}
+.wp-doc-twentyfourteen select#documentation_list{
+  margin-left: 26%;
+      margin-bottom: 7%;
+}
+.wp-doc-twentyfourteen .has-post-thumbnail:first-child{margin-top: 0!important}
+@media screen and (min-width: 59.6875em){
+  .wp-doc-twenty-fifteen .wp-doc-theme .wp-documentaton-tools {
+    margin: 15px 79px;
+}
+}
+
+.wp-doc-section ol{list-style: decimal;}
+.wp-doc-section ul{list-style: disc;}
+
+/*Caption CSS*/
+.wp-doc-theme figure.wp-caption{
+  border: 1px solid #cecece;
+}
+
+.wp-doc-theme figcaption.wp-caption-text{
+  background: #fefefe;
+  padding: 5px;
+  text-align: center;
+}
